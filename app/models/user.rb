@@ -1,10 +1,7 @@
 class User < ApplicationRecord
     has_secure_password
     #mount_uploader :avatar, AvatarUploader
-    field :age, type: Integer
-    field :address, type: String
-    field :delivery_address, type: String
-    field :role, type: Integer
+    attr_accessor :age, :address, :delivery_address, :role
     validates :email, presence: true, uniqueness: true
     validates :phone, presence: true, uniqueness: true
     validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }

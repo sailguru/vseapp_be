@@ -1,0 +1,12 @@
+FROM ubuntu
+MAINTAINER "jagadish Manchala"
+#Install git
+RUN apt-get update \        
+     apt-get install -y git
+RUN mkdir /home/app \      
+           cd /home/app \        
+           git clone https://github.com/sailguru/vseapp_fe.git
+#Set working directory
+WORKDIR /home/app
+RUN npm i
+RUN npm run dev
