@@ -7,7 +7,7 @@ require "net/smtp"
 require "uri"
 require "erb"
 
-class SMSC
+class Smsc
 	# Константы для настройки библиотеки
 	SMSC_LOGIN = "login"			# логин клиента
 	SMSC_PASSWORD = "password"		# пароль

@@ -12,6 +12,9 @@ gem "pg", "~> 1.1"
 # Auth tokens
 gem 'jwt'
 
+# CORS
+gem 'rack-cors'
+
 # RabbitMQ adapter
 gem 'bunny'
 

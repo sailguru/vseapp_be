@@ -1,4 +1,4 @@
-class AuthPublisher
+class Auth::AuthPublisher
     DEFAULT_OPTIONS = { durable: true, auto_delete: false }.freeze
 
     def self.publish(queue_name:, payload:)

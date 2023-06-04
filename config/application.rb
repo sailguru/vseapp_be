@@ -11,12 +11,8 @@ module Backend
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
-    config.autoload_paths += %W(#{config.root}/lib)
-    config.autoload_paths += %W(#{config.root}/controllers)
-    config.autoload_paths += %W(#{config.root}/controllers/auth)
-    config.autoload_paths += %W(#{config.root}/controllers/resource)
-    config.autoload_paths += %W(#{config.root}/entities/auth)
-    config.autoload_paths += %W(#{config.root}/entities/connection)
+    config.autoload_paths += %W(#{config.root}/services)
+    config.autoload_paths += %W(#{config.root}/entities)
 
     # Configuration for the application, engines, and railties goes here.
     #
@@ -30,5 +26,12 @@ module Backend
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    # Autoload watchers
+    #Spring.watch "app/services/**"
+    #Spring.watch "app/entities/**"
+    
+    #config.active_job.queue_adapter = :sidekiq
   end
 end
+

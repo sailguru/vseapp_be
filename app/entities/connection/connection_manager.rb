@@ -1,4 +1,4 @@
-class ConnectionManager
+class Connection::ConnectionManager
     include Singleton
   
     def initialize

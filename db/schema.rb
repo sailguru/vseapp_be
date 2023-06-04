@@ -39,12 +39,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_30_073738) do
     t.string "name"
     t.string "username"
     t.string "phone"
-    t.integer "age"
+    t.string "token"
+    t.string "code"
     t.string "address"
     t.string "delivery_address"
     t.string "role"
     t.string "email"
-    t.string "password_digest"
+    t.string "plan"
+    t.datetime "token_expr"
+    t.datetime "code_expr"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
